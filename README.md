@@ -18,7 +18,7 @@ EDIT TournamentTracker/TournamentUi/app.config
         Sql Code for creating needed tables and stored procedures
          test.sql is used just for testing it deletes all tables
         firstly run the storedprocedures.sql then db.sql(two times the last one)
-         Also change the connection string in the same file if u using mysql 
+         Also change the connection string in the app.config file if u using mysql 
          
          <connectionStrings>
           <add name="tournaments" connectionString="Server=localhost;Port=3310;Database=tournaments;Uid=root;Pwd=1234567890;" providerName="MySql.Data.MySqlClient" />
