@@ -1,1 +1,23 @@
 # TournamentTracker
+
+
+EDIT TournamentTracker/TournamentUi/app.config  
+
+
+
+        <add key="filePath" value="ur file path u want to store the  data" />
+        <add key="ClientSettingsProvider.ServiceUri" value="" />
+        <add key="greaterWins" value="1" /> dont change unless u want to track tournaments where teams with smaller score win
+        <add key="SenderEmail" value="" /> ur sending email
+        <add key="DisplaySender" value="" /> name of the sender 
+    Also change the connection string in the same file if u using mysql 
+    the default database in which program runs is textfile file u may change in TournamentTracker/TournamentUi/program.cs
+    set it to mysql 
+         <connectionStrings>
+          <add name="tournaments" connectionString="Server=localhost;Port=3310;Database=tournaments;Uid=root;Pwd=1234567890;" providerName="MySql.Data.MySqlClient" />
+        </connectionStrings>
+        Also change TournamentTracker/TTracker/EmailLogic.cs /
+        
+       for email credentials and more
+
+
