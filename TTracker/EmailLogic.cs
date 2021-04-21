@@ -16,7 +16,7 @@ namespace TTracker
                                                          //email,//dispaly name 
                                                            // for example
                                                         //hello2gmail.com// hello wolrdl
-            MailAddress fromMailAddress = new MailAddress("hello2gmail.com", "hello wolrdl");
+            MailAddress fromMailAddress = new MailAddress(System.Configuration.ConfigurationManager.AppSettings["SenderEmail"], System.Configuration.ConfigurationManager.AppSettings["DisplaySender"]);
 
             MailMessage message = new MailMessage();
             message.To.Add(to);
@@ -25,7 +25,7 @@ namespace TTracker
             message.IsBodyHtml = true;
             message.From = fromMailAddress;
             SmtpClient Client = new SmtpClient();                //email , //password
-            Client.Credentials = new System.Net.NetworkCredential("","" );
+            Client.Credentials = new System.Net.NetworkCredential(System.Configuration.ConfigurationManager.AppSettings["SenderEmail"],System.Configuration.ConfigurationManager.AppSettings["password"] );
             Client.Host = "smtp.gmail.com";
             Client.Send(message);
         }
